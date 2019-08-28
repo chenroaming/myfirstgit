@@ -1,0 +1,93 @@
+#header {
+  .topheader {
+    background: #fff;
+    width: 1280px;
+    margin: 0 auto;
+    height: 70px;
+    line-height: 70px;
+    color: #333;
+    font-size: 14px;
+    position: relative;
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        color: #45abfd;
+      }
+    }
+
+    .logo {
+      float: left;
+      height: 44px;
+      margin-top: 7px;
+      img {
+        height: 130%;
+        vertical-align: top;
+      }
+    }
+    .topleft {
+      float: left;
+      margin-left: 180px;
+      .topli {
+        padding: 0 14px;
+        .topa {
+          display: inline-block;
+          position: relative;
+          &:after {
+            content: '';
+            left: 50%;
+            right: 50%;
+            height: 2px;
+            position: absolute;
+            background: #45abfd;
+            top: 67px;
+          }
+          &:hover:after {
+            left: 0;
+            right: 0;
+          }
+        }
+        &.disabled .topa{
+          color: #999;
+          &:after {
+            content: '';
+          }
+          &:hover{
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+    .topright {
+      float: right;
+      .topli {
+        padding: 0 10px;
+        .topa {
+          display: inline-block;
+          position: relative;
+        }
+      }
+      .icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        padding-right: 2px;
+      }
+      .member {
+        background: url('/images/header-phoneicon.png') no-repeat 1px -27px;
+      }
+    }
+    .topli {
+      float: left;
+    }
+  }
+}
+
+.topheader:after, .topheader .topleft:after, .topheader .topright:after {
+  content: '';
+  display: table;
+  clear: both;
+}

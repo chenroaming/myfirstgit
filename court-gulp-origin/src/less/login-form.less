@@ -1,0 +1,227 @@
+.tab  .lini-tab .activ{
+  color: #000;
+}
+a{
+  color: #369;
+  outline: medium none;
+  text-decoration: none;
+}
+.tab h3{
+  margin:0;
+  a {
+    padding: 0.5em 0;
+    text-align: center;
+    font-weight: 400;
+    display: block;
+    color: #666;
+    border: 0;
+    font-size: 14px;
+    &.activ span {
+      padding-bottom: 4px;
+      border-bottom: 1px solid #40a9ff;
+    }
+  }
+}
+.pos {
+    position: relative;
+}
+.form-data label, .find_password label {
+    font-size: 14px;
+    position: absolute;
+    display: inline-block;
+    color: #cacaca;
+    top: 22px;
+}
+.form-data{
+  background-color: #ffffff;
+  width: 460px;
+  left: 50%;
+  margin-left: -230px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0,0,0,.1);
+  padding: 35px 0 15px 0;
+  position: fixed;
+  top: 15%;
+  z-index:999;
+  .change-login {
+    width: 400px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #cacaca;
+    p {
+      cursor: pointer;
+    }
+    p.on {
+      color: #76b9f7;
+    }
+  }
+}
+
+.form-data .p-input, .find_password .p-input {
+    padding: 5px 0;
+    height: 44px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e5e5e5;
+    width: 340px;
+    margin: 0 auto 16px;
+    line-height: 14px;
+    display: block;
+}
+.form-data input, .find_password input {
+    outline: none;
+    border: none;
+    z-index: 5;
+    position: absolute;
+    top: 13px;
+    width: 340px;
+    background-color: transparent;
+    font-size: 20px;
+}
+.hide {
+    display: none !important;
+}
+.form-data .tel-warn {
+    position: absolute;
+    color: #ea5d5f;
+    font-size: 12px;
+    right: 0;
+    top: 22px;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      color: #ea5d5f;
+      font-size: 16px;
+      margin-top: -3px;
+      margin-left: 5px;
+  }
+}
+.form-data .lang-btn {
+    width: 340px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    height: 50px;
+    border: none;
+    outline:none;
+    line-height: 50px;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #42a5f5;
+}
+.form-data .lang-btn.off {
+  color: #a0a0a0;
+  background-color: #e5e5e5;
+}
+.form-data .r-forget {
+    width: 340px;
+    margin: 0 auto;
+}
+.form-data .r-forget a {
+    font-size: 12px;
+    color: #8d8d8d;
+}
+.y {
+    float: right !important;
+}
+.z {
+    float: left !important;
+}
+.right-footer{
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+}
+.form-data .send {
+  color: #969696;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 10;
+  font-size: 12px;
+}
+.form-data .sendLawyer {
+    color: #969696;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    z-index: 10;
+    font-size: 12px;
+  }
+.form-data .time {
+    color: #969696;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    font-size: 14px;
+}
+.form-data .timeLawyer {
+    color: #969696;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    font-size: 14px;
+}
+.quit{
+  width:40px;
+  height: 40px;
+  
+}
+.quit-b{
+  background-color: white;
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  cursor: pointer;
+}
+
+//忘记密码框的样式
+#fogetPwd{
+  color:#42a5f5;
+  margin-left: 10px;
+}
+
+#sendAutdCode{
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 10;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.noSend {
+  color: #337ab7;
+}
+
+.sending {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  z-index: 10;
+  font-size: 12px;
+  color: #969696;
+}
+
+#steps1 {
+  width: 90%;
+  margin:0 auto;
+}
+ .tips{
+   text-align: center;
+ }
+
+#userName {
+  width: 100px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  vertical-align: middle
+}

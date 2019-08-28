@@ -1,0 +1,91 @@
+#header .topheader {
+  background: #fff;
+  width: 1280px;
+  margin: 0 auto;
+  height: 70px;
+  line-height: 70px;
+  color: #333;
+  font-size: 14px;
+  position: relative;
+}
+#header .topheader a {
+  color: #333;
+  text-decoration: none;
+}
+#header .topheader a:hover {
+  color: #45abfd;
+}
+#header .topheader .logo {
+  float: left;
+  height: 44px;
+  margin-top: 7px;
+}
+#header .topheader .logo img {
+  height: 130%;
+  vertical-align: top;
+}
+#header .topheader .topleft {
+  float: left;
+  margin-left: 180px;
+}
+#header .topheader .topleft .topli {
+  padding: 0 14px;
+}
+#header .topheader .topleft .topli .topa {
+  display: inline-block;
+  position: relative;
+}
+#header .topheader .topleft .topli .topa:after {
+  content: '';
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  position: absolute;
+  background: #45abfd;
+  top: 67px;
+}
+#header .topheader .topleft .topli .topa:hover:after {
+  left: 0;
+  right: 0;
+}
+#header .topheader .topleft .topli.disabled .topa {
+  color: #999;
+}
+#header .topheader .topleft .topli.disabled .topa:after {
+  content: '';
+}
+#header .topheader .topleft .topli.disabled .topa:hover {
+  cursor: not-allowed;
+}
+#header .topheader .topright {
+  float: right;
+}
+#header .topheader .topright .topli {
+  padding: 0 10px;
+}
+#header .topheader .topright .topli .topa {
+  display: inline-block;
+  position: relative;
+}
+#header .topheader .topright .icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  padding-right: 2px;
+}
+#header .topheader .topright .member {
+  background: url('/images/header-phoneicon.png') no-repeat 1px -27px;
+}
+#header .topheader .topli {
+  float: left;
+}
+.topheader:after,
+.topheader .topleft:after,
+.topheader .topright:after {
+  content: '';
+  display: table;
+  clear: both;
+}

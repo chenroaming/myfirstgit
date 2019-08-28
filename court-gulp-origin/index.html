@@ -1,0 +1,1361 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="UTF-8" />
+  <meta name="renderer" content="webkit">
+  <title>湖里区人民法院互联网法庭</title>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="厦门市湖里区人民法院" />
+  <link rel="stylesheet" type="text/css" href="./css/style-index.css" />
+  <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/4.2.6/css/swiper.min.css  ">
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.bootcss.com/Swiper/4.2.6/js/swiper.min.js"></script>
+  <script src="https://cdn.bootcss.com/limonte-sweetalert2/7.21.1/sweetalert2.all.min.js"></script>
+  <script src="./js/md5.min.js"></script>
+</head>
+
+<body class="language-cn">
+  <div id="header">
+    <div class="topheader">
+      <a href="index.html" class="logo">
+        <img src="/images/logo.gif" alt="湖里区人民法院">
+      </a>
+      <ul class="topleft">
+        <li class="topli">
+          <a href="./index.html" class="topa">
+            首页
+          </a>
+        </li>
+        <li class="topli">
+          <a href="/setcase" class="topa" target="_blank">
+            在线立案
+          </a>
+        </li>
+        <li class="topli">
+          <a href="/send" class="topa" target="_blank">
+            易送达诉讼服务
+          </a>
+        </li>
+        <li class="topli">
+          <a href="/witness" class="topa" target="_blank">
+            在线质证平台
+          </a>
+        </li>
+        <li class="topli">
+          <a href="/rtc/index.html" class="topa" target="_blank">
+            在线庭审平台
+          </a>
+        </li>
+        <li class="topli disabled">
+          <a href="/bigData/index.html" onclick="jumpBigData()" class="topa" target="blank">
+            法院大数据
+          </a>
+        </li>
+      </ul>
+      <ul class="topright">
+        <li class="topli login-wrapper">
+          <span class="icon member"></span>
+          <a href="#" class="topa" onclick="openLogin()">登录</a>
+          <span class="gap">|</span>
+          <a href="#" class="topa" onclick="openSign()">注册</a>
+        </li>
+        <li class="topli user-wrapper" style="display: none">
+          <span class="icon member"></span>
+          <a href="#" class="topa" id="userName">欢迎您！</a>
+          <span class="gap">|</span>
+          <a href="#" class="topa" onclick="logout()">登出</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="container" class="index-page">
+    <div id="banner">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/banner-1.jpg" alt="banner" width="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/banner-2.jpg" alt="banner" width="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/banner-3.jpg" alt="banner" width="100%">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <div id="fast">
+      <div class="content">
+        <div class="title">快速通道入口</div>
+        <div class="way-wrapper">
+          <a href="/setcase">
+            <img src="./images/way-1.png" alt="在线立案">
+            <div class="text">在线立案系统</div>
+          </a>
+          <a href="/send">
+            <img src="./images/way-2.png" alt="易送达">
+            <div class="text">易送达诉讼服务</div>
+          </a>
+          <a href="/witness">
+            <img src="./images/way-3.png" alt="在线质证">
+            <div class="text">在线质证系统</div>
+          </a>
+          <a href="/rtc">
+            <img src="./images/way-4.png" alt="在线庭审">
+            <div class="text">在线庭审系统</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="flow">
+      <div class="content">
+        <div class="title">在线庭审流程
+          <span>远程庭审、语音识别、提供便利、提升效率</span>
+        </div>
+        <div class="tab-wrapper">
+          <div class="tab-btn">
+            <div class="active" data-value="0">原告起诉</div>
+            <div data-value="1">被告应诉</div>
+          </div>
+          <div class="tab-content">
+            <img class="show" src="./images/yuangao.png" alt="原告起诉">
+            <img src="./images/beigao.png" alt="被告应诉">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="news">
+      <div class="content">
+        <div class="title">法庭新闻
+          <span>第一时间分享，司法最新资讯</span>
+        </div>
+        <div class="news-content">
+          <a href="#" class="mian">
+            <img src="./images/news-main.png" alt="新闻">
+            <div class="text">
+              <p>最高法院纪检组原组长李玉成大法官一行莅厦考察指导法文化建设工作</p>
+              <div class="button">
+                更多>>
+              </div>
+            </div>
+          </a>
+          <ul class="list">
+            <li>
+              <a href="#">
+                <img src="./images/news-1.png" alt="新闻图片">
+                <div class="text">
+                  <div class="text-title">中华司法研究会涉台司法研究基地落户厦门</div>
+                  <div class="text-content">10月10日，中华司法研究会涉台司法研究基地签约暨授牌仪式在中院举行，中华司法研究会专职副秘书长……</div>
+                  <div class="text-button">
+                    更多>>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/news-1.png" alt="新闻图片">
+                <div class="text">
+                  <div class="text-title">中华司法研究会涉台司法研究基地落户厦门</div>
+                  <div class="text-content">10月10日，中华司法研究会涉台司法研究基地签约暨授牌仪式在中院举行，中华司法研究会专职副秘书长……</div>
+                  <div class="text-button">
+                    更多>>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/news-1.png" alt="新闻图片">
+                <div class="text">
+                  <div class="text-title">中华司法研究会涉台司法研究基地落户厦门</div>
+                  <div class="text-content">10月10日，中华司法研究会涉台司法研究基地签约暨授牌仪式在中院举行，中华司法研究会专职副秘书长……</div>
+                  <div class="text-button">
+                    更多>>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="case">
+      <div class="content">
+        <div class="title">案件直击
+          <span>深化司法公开、促进司法公正、提升司法公信</span>
+        </div>
+        <div class="box-wrapper">
+          <div class="box-item">
+            <img src="./images/case-1.jpg" alt="">
+            <div class="box-content">
+              <div class="box-content-title">某某公司合同纠纷案</div>
+              <div class="box-content-time">2018-05-18 15:03:03</div>
+              <div class="box-content-text">
+                案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍
+              </div>
+            </div>
+          </div>
+          <div class="box-item">
+            <img src="./images/case-1.jpg" alt="">
+            <div class="box-content">
+              <div class="box-content-title">某某公司合同纠纷案</div>
+              <div class="box-content-time">2018-05-18 15:03:03</div>
+              <div class="box-content-text">
+                案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍
+              </div>
+            </div>
+          </div>
+          <div class="box-item">
+            <img src="./images/case-1.jpg" alt="">
+            <div class="box-content">
+              <div class="box-content-title">某某公司合同纠纷案</div>
+              <div class="box-content-time">2018-05-18 15:03:03</div>
+              <div class="box-content-text">
+                案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍
+              </div>
+            </div>
+          </div>
+          <div class="box-item">
+            <img src="./images/case-1.jpg" alt="">
+            <div class="box-content">
+              <div class="box-content-title">某某公司合同纠纷案</div>
+              <div class="box-content-time">2018-05-18 15:03:03</div>
+              <div class="box-content-text">
+                案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍案件简单介绍
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="examples">
+      <div class="content">
+        <div class="title">典型案例
+          <span>建档立卡、精准执行</span>
+        </div>
+        <div class="operation-wrapper">
+          <div class="search-wrapper">
+            <div class="search-input">
+              <input type="text">
+            </div>
+            <div class="search-btn">搜索</div>
+          </div>
+          <div class="operation-btn">我要听庭</div>
+          <div class="operation-btn">我要申请</div>
+        </div>
+        <div class="video-wrapper">
+          <ul>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+            <li class="video-item">
+              <img src="./images/video-1.jpg" alt="">
+              <div class="video-content">
+                <div class="video-title">某某公司合同纠纷案</div>
+                <div class="video-time">2018-03-12 15:00:03</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="notices">
+      <div class="content">
+        <div class="title">
+          焦点公告
+        </div>
+        <div class="notice-wrapper">
+          <div class="open-notice">
+            <div class="open-notice-title">开庭公告</div>
+            <ul>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+            </ul>
+            <div class="btn-more">更多>></div>
+          </div>
+          <div class="court-notice">
+            <div class="court-notice-title">法庭公告</div>
+            <ul>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+              <li>
+                <span>厦门市中级人民法院关于建立2018厦门市中级人民法院关于建立2018</span>
+                <span>2018-03-12</span>
+              </li>
+            </ul>
+            <div class="btn-more">更多>></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div id="footer">
+      <div class="botfooter">
+        <div class="footer-content">
+          <div class="friendship">
+            <span>最高人民法院</span>
+            <span>|</span>
+            <span>福建省高级人民法院</span>
+            <span>|</span>
+            <span>福建法院庭审直播网</span>
+          </div>
+          <div class="other">
+            <span>网站介绍</span>
+            <span>联系我们</span>
+            <span>主办单位：福建省厦门市湖里区人民法院</span>
+            <span>法院地址：福建省厦门市湖里区金尚路1789号</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span style="font-size:14px">
+      <p id="back-to-top">
+        <a href="#top">
+          <img src="./images/top.png" alt="返回顶部">
+        </a>
+      </p>
+    </span>
+    <div class="back-h hide" style="background-color:rgba(0,0,0,0.4);position:fixed;width:100%;top:0;left:0;height:100%;z-index:998">
+      <!-- 登录弹框 -->
+      <div class="form-data pos hide" id="login-d">
+        <span class="quit-b">
+          <img src="./images/cansole.png" alt="" class="quit">
+        </span>
+
+        <div class="change-login">
+          <p class="account_number on">当事人/律师</p>
+          <p class="message">法院工作者</p>
+        </div>
+        <div class="form1">
+          <p class="p-input pos">
+            <label for="num">请输入身份证号</label>
+            <input type="text" id="num">
+            <span class="tel-warn num-err hide">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="pass">请输入密码</label>
+            <input type="password" style="display:none" />
+            <input type="password" id="pass" autocomplete="new-password">
+            <span class="tel-warn pass-err hide">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos code">
+            <label for="veri">请输入验证码</label>
+            <input type="text" id="veri1" style="width:250px">
+            <span class="code-wrapper" onclick="changeCode()" style="float:right;z-index:99;cursor:pointer">
+              <img height="32px" style="vertical-align: middle;" class="code-ch" src="/api/main/code.jhtml" alt="验证码">
+            </span>
+            <span class="tel-warn img-err hide">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+            <!-- <a href="javascript:;">换一换</a> -->
+          </p>
+        </div>
+        <div class="form2 hide">
+          <p class="p-input pos">
+            <label for="num1">请输入用户名</label>
+            <input type="text" id="num1">
+            <span class="tel-warn num-err hide">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="pass1">请输入密码</label>
+            <input type="password" style="display:none" />
+            <input type="password" id="pass1" autocomplete="new-password">
+            <span class="tel-warn pass-err hide">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos code">
+            <label for="veri">请输入验证码</label>
+            <input type="text" id="veri2" style="width:250px">
+            <span class="code-wrapper" onclick="changeCode()" style="float:right;z-index:99;cursor:pointer">
+              <img height="32px" style="vertical-align: middle;" class="code-ch" src="/api/main/code.jhtml" alt="验证码">
+            </span>
+            <span class="tel-warn img-err hide">
+              <em>验证码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+            <!-- <a href="javascript:;">换一换</a> -->
+          </p>
+        </div>
+        <button class="lang-btn off log-btn">登录</button>
+        <div class="r-forget cl" style="height: 20px;">
+          <a href="#" onclick="changeSign()" style="color:#42a5f5" class="z">账号注册</a>
+          <a href="/易送达诉讼服务客户端.url" class="y">下载客户端</a>
+        </div>
+        <p class="right-footer">本网站只支持IE9+等现代浏览器
+          <a href="/chrome/67.0.3396.62_chrome_installer_x64.exe" download="67.0.3396.62_chrome_installer_x64.exe">chrome下载</a>
+        </p>
+      </div>
+      <div class="form-data pos hide" id="sine">
+        <span class="quit-b">
+          <img src="./images/cansole.png" alt="" class="quit">
+        </span>
+        <div class="change-login">
+          <p class="message" style="color: #42a5f5;font-size:20px;margin:0">注册</p>
+        </div>
+        <div class="signform1 ">
+          <p class="p-input pos">
+            <label for="phonenum">请输入手机号</label>
+            <input type="text" id="phonenum">
+            <span class="tel-warn num2-err hide" id="phoneWarn">
+              <em>账号或密码错误</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="phoneCode">输入验证码</label>
+            <input type="text" id="phoneCode" style="width:250px">
+            <a href="javascript:;" class="send">发送验证码</a>
+            <span class="time hide">
+              <em id="miao">120</em>s</span>
+            <span class="tel-warn error hide">验证码错误</span>
+          </p>
+        </div>
+        <div class="signform2 hide" style="height: 500px;overflow: auto;">
+          <p class="p-input pos">
+            <label for="idCard">请输入身份证号</label>
+            <input type="text" id="idCard">
+            <span class="tel-warn num-err hide" id="idCardWarn">
+              <em>身份证号错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="name">请输入姓名</label>
+            <input type="text" id="name">
+          </p>
+          <p class="p-input pos">
+            <label for="password">请输入密码</label>
+            <input type="password" style="display:none" />
+            <input type="password" id="password" autocomplete="new-password">
+            <span class="tel-warn pass-err hide" id="passWarn">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="password2">请输入确认密码</label>
+            <input type="password" style="display:none" />
+            <input type="password" id="password2" autocomplete="new-password">
+            <span class="tel-warn pass-err hide" id="pass2Warn">
+              <em>账号或密码错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="email">请输入邮箱</label>
+            <input type="text" id="email">
+            <span class="tel-warn num-err hide" id="emailWarn">
+              <em>邮箱错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <p class="p-input pos">
+            <label for="trueAddress">请输入地址</label>
+            <input type="text" id="trueAddress">
+            <span class="tel-warn num-err hide">
+              <em>地址错误，请重新输入</em>
+              <i class="icon-warn"></i>
+            </span>
+          </p>
+          <div class="row" style="width: 340px;margin: 0 auto 15px;padding: 0px 0px 15px;border-bottom: 1px solid #e5e5e5;">
+            <div class="col-xs-4" style="padding-left: 0px;color:#bdbbbb;">
+              上传身份证照片
+            </div>
+            <div class="col-xs-8">
+              <div id="preview" style="cursor: pointer;">
+                <img id="idCardUrl" border="0" src="./images/pic.png" width="90" height="90" onclick="$('#idCardImg').click();">
+              </div>
+              <input type="file" onchange="previewImage(this)" style="display: none;" id="idCardImg">
+            </div>
+          </div>
+          <div class="row" style="width: 340px;margin: 0 auto 15px;padding: 0px 0px 15px;border-bottom: 1px solid #e5e5e5;">
+            <div class="col-xs-4" style="padding-left: 0px;color:#bdbbbb;">
+              上传手持身份证照片
+            </div>
+            <div class="col-xs-8">
+              <div id="preview" style="cursor: pointer;">
+                <img id="holdIdCardUrl" border="0" src="./images/pic.png" width="90" height="90" onclick="$('#holdIdCardImg').click();">
+              </div>
+              <input type="file" onchange="previewImage(this)" style="display: none;" id="holdIdCardImg">
+            </div>
+          </div>
+          <button class="lang-btn  hide " id="signBtn">注册</button>
+        </div>
+        <button class="lang-btn " id="nextBtn">下一步</button>
+        <div class="r-forget cl" style="height: 20px;">
+          <a href="#" onclick="changeLogin()" style="color:#42a5f5" class="z">返回登录</a>
+          <a href="/易送达诉讼服务客户端.url" class="y">下载客户端</a>
+        </div>
+        <p class="right-footer">本网站只支持IE9+等现代浏览器
+          <a href="/chrome/67.0.3396.62_chrome_installer_x64.exe" download="67.0.3396.62_chrome_installer_x64.exe">chrome下载</a>
+        </p>
+      </div>
+      <div class="form-data pos hide" id="legal">
+        <span class="quit-b">
+          <img src="./images/cansole.png" alt="" class="quit">
+        </span>
+        <div class="signform" style="height: 500px;overflow: auto;">
+          <p class="p-input pos">
+            <label for="companyName">公司名称</label>
+            <input type="text" id="companyName">
+          </p>
+          <p class="p-input pos">
+            <label for="companyPassword">密码</label>
+            <input type="text" id="companyPassword">
+          </p>
+          <p class="p-input pos">
+            <label for="companyIdCard">统一信用代码</label>
+            <input type="text" id="companyIdCard">
+          </p>
+          <p class="p-input pos">
+            <label for="companyEmail">电子邮件</label>
+            <input type="text" id="companyEmail">
+          </p>
+          <p class="p-input pos">
+            <label for="companyAddress">地址</label>
+            <input type="text" id="companyAddress">
+          </p>
+          <p class="p-input pos">
+            <label for="companyLegalName">法定代表人/负责人</label>
+            <input type="text" id="companyLegalName">
+          </p>
+          <p class="p-input pos">
+            <label for="companyPhone">手机号码</label>
+            <input type="text" id="companyPhone">
+          </p>
+          <p class="p-input pos">
+            <label for="companyLegalId">法定代表人/负责人身份证</label>
+            <input type="text" id="companyLegalId">
+          </p>
+          <div class="row" style="width: 340px;margin: 0 auto 15px;padding: 0px 0px 15px;border-bottom: 1px solid #e5e5e5;">
+            <div class="col-xs-4" style="padding-left: 0px;color:#bdbbbb;">
+              上传委托书
+            </div>
+            <div class="col-xs-8">
+              <div id="preview" style="cursor: pointer;">
+                <img id="powerAttorneyUrl" border="0" src="./images/pic.png" width="90" height="90" onclick="$('#powerAttorneyImg').click();">
+              </div>
+              <input type="file" onchange="previewImage(this)" style="display: none;" id="powerAttorneyImg">
+            </div>
+          </div>
+          <div class="row" style="width: 340px;margin: 0 auto 15px;padding: 0px 0px 15px;border-bottom: 1px solid #e5e5e5;">
+            <div class="col-xs-4" style="padding-left: 0px;color:#bdbbbb;">
+              上传劳动合同
+            </div>
+            <div class="col-xs-8">
+              <div id="preview" style="cursor: pointer;">
+                <img id="laborContractUrl" border="0" src="./images/pic.png" width="90" height="90" onclick="$('#laborContractImg').click();">
+              </div>
+              <input type="file" onchange="previewImage(this)" style="display: none;" id="laborContractImg">
+            </div>
+          </div>
+          <button class="lang-btn" id="signCompanyBtn">注册</button>
+          <div class="r-forget cl" style="height: 20px;">
+            <a href="#" onclick="changeLogin()" style="color:#42a5f5" class="z">返回登录</a>
+            <a href="/易送达诉讼服务客户端.url" class="y">下载客户端</a>
+          </div>
+          <p class="right-footer">本网站只支持IE9+等现代浏览器
+            <a href="/chrome/67.0.3396.62_chrome_installer_x64.exe" download="67.0.3396.62_chrome_installer_x64.exe">chrome下载</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  function previewImage(target) {
+    console.log($(target).prev().children('img'))
+    console.log(target.files[0])
+    if (target.files[0]) {
+      var formData = new FormData()
+      formData.append('file', target.files[0])
+      $.ajax({
+        url: '/api/main/registerUpload.jhtml',
+        type: 'post',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (res) {
+          console.log(res)
+          $(target).prev().children('img')[0].src = res.url
+        }
+      })
+    } else {
+      sweetAlert({
+        title: '请选择正确文件',
+        type: 'error',
+        confirmButtonText: "好的"
+      })
+    }
+  }
+</script>
+<script>
+  function jumpBigData(e) {
+    if (e && e.preventDefault)
+      e.preventDefault();
+    else
+      window.event.returnValue = false;
+    console.log(getUserInfo())
+    if (getUserInfo())
+      window.open(window.event.target)
+    else
+      openLogin()
+  }
+
+  $(function () {
+    getUserInfo()
+  })
+
+  function getUserInfo() {
+    var hasLogin = false
+    $.ajax({
+      url: '/api/main/getUserInfo.jhtml',
+      type: 'get',
+      dataType: 'json',
+      async: false,
+      success: function (data) {
+        if (data.state == 100) {
+          $(".login-wrapper").hide();
+          $(".user-wrapper").show();
+          if (data.result.name == null) {
+            $('#userName').text('欢迎您！' + data.result.username)
+          } else {
+            $('#userName').text('欢迎您！' + data.result.name)
+            $(".topli").removeClass('disabled');
+            hasLogin = true
+          }
+
+        }
+      }
+    })
+    return hasLogin
+  }
+
+  function logout() {
+    $.ajax({
+      url: '/api/main/loginOut.jhtml',
+      type: 'get',
+      dataType: 'json',
+      success: function (data) {
+        if (data.state == 100) {
+          $(".login-wrapper").show();
+          $(".user-wrapper").hide();
+          $(".topli").eq(5).addClass('disabled');
+          sweetAlert({
+            title: data.message,
+            type: "success",
+            timer: 1500
+          });
+        }
+      }
+    })
+  }
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: true,
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    }
+  })
+  $('.tab-btn > div').on('click', function () {
+    $('.tab-btn > div').removeClass()
+    $('.tab-content > img').removeClass()
+    $($('.tab-content > img')[$(this).addClass('active').data('value')]).addClass('show')
+  })
+
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+      $("#back-to-top").fadeIn(1500);
+    } else {
+      $("#back-to-top").fadeOut(1500);
+    }
+  });
+
+  //当点击跳转链接后，回到页面顶部位置
+  $("#back-to-top").click(function () {
+    console.log(1)
+    //$('body,html').animate({scrollTop:0},1000);
+    if ($('html').scrollTop()) {
+      $('html').animate({
+        scrollTop: 0
+      }, 1000);
+      return false;
+    }
+    $('body').animate({
+      scrollTop: 0
+    }, 1000);
+    return false;
+  });
+
+  // 打开登录弹框
+  function openLogin() {
+    $("#login-d").removeClass("hide");
+    $(".back-h").removeClass('hide');
+  }
+  //打开注册弹框
+  function openSign() {
+    $(".signform1").removeClass("hide");
+    $(".signform2").addClass("hide");
+    $("#signBtn").addClass("hide");
+    $("#nextBtn").removeClass("hide");
+    sweetAlert({
+      title: '请选择注册角色',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: '自然人',
+      cancelButtonText: '法人/非法人',
+      allowOutsideClick: false
+    }).then((result) => {
+      if (result.value) {
+        $("#sine").removeClass("hide");
+        $(".back-h").removeClass('hide');
+      } else {
+        $("#legal").removeClass("hide");
+        $(".back-h").removeClass('hide');
+      }
+    })
+
+  }
+  //关闭注册登录弹框
+  $(".quit-b").on("click", function () {
+    $('.form-data').addClass("hide");
+    $(".back-h").addClass('hide');
+
+  })
+  //切换注册页面
+  function changeSign() {
+    $("#login-d").addClass('hide');
+    $("#sine").removeClass("hide");
+  }
+  //切换登录页面
+  function changeLogin() {
+    $("#legal").addClass('hide');
+    $("#sine").addClass('hide');
+    $("#login-d").removeClass("hide");
+  }
+
+  var tab = 'account_number';
+  // 选项卡切换
+  $(".account_number").click(function () {
+    $('.tel-warn').addClass('hide');
+    tab = $(this).attr('class').split(' ')[0];
+    $(this).addClass("on");
+    checkBtn()
+    $(".message").removeClass("on");
+    $(".form2").addClass("hide");
+    $(".form1").removeClass("hide");
+  });
+  // 选项卡切换
+  $(".message").click(function () {
+    $('.tel-warn').addClass('hide');
+    tab = $(this).attr('class').split(' ')[0];
+    $(this).addClass("on");
+    checkBtn()
+    $(".account_number").removeClass("on");
+    $(".form2").removeClass("hide");
+    $(".form1").addClass("hide");
+
+  });
+  $('#num').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+
+  $('#pass').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+
+  $('#veri1').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+
+  $('#num1').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+
+  $('#pass1').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+
+  $('#veri2').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+  $('#veri2').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+  $('#veri2').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+    checkBtn();
+  });
+
+  $('#idCard').keyup(function (event) {
+    $('#idCardWarn').addClass('hide');
+  });
+  $('#password').keyup(function (event) {
+    $('#passWarn').addClass('hide');
+  });
+  $('#password2').keyup(function (event) {
+    $('#pass2Warn').addClass('hide');
+  });
+  $('#phonenum').keyup(function (event) {
+    $('#phoneWarn').addClass('hide');
+  });
+  // 按钮是否可点击
+  function checkBtn() {
+    $(".log-btn").off('click');
+    if (tab == 'account_number') {
+      var inp = $.trim($('#num').val());
+      var pass = $.trim($('#pass').val());
+      var veri1 = $.trim($('#veri1').val());
+      if (inp != '' && pass != '' && veri1 != '') {
+        $(".log-btn").removeClass("off");
+        sendBtn();
+      } else {
+        $(".log-btn").addClass("off");
+      }
+    } else {
+      var inp1 = $.trim($('#num1').val());
+      var pass1 = $.trim($('#pass1').val());
+      var veri2 = $.trim($('#veri2').val());
+      if (inp1 != '' && pass1 != '' && veri2 != '') {
+        $(".log-btn").removeClass("off");
+        sendBtn();
+      } else {
+        $(".log-btn").addClass("off");
+      }
+    }
+  }
+  //更改验证码
+  function changeCode() {
+    $(".code-ch").attr("src", "/api/main/code.jhtml?tm=" + Math.random())
+  }
+
+  function checkAccount(username) {
+    if (username == '') {
+      $('.num-err').removeClass('hide').find("em").text('请输入账户');
+      return false;
+    } else {
+      $('.num-err').addClass('hide');
+      return true;
+    }
+  }
+
+  function checkPass(pass) {
+    if (pass == '') {
+      $('.pass-err').removeClass('hide').text('请输入密码');
+      return false;
+    } else {
+      $('.pass-err').addClass('hide');
+      return true;
+    }
+  }
+
+  $('#phonenum').keyup(function (event) {
+    $('.tel-warn').addClass('hide');
+  });
+
+  $(".send").click(function () {
+    var phone = $.trim($('#phonenum').val());
+    if (checkPhone(phone)) {
+      sign();
+      $(".time").removeClass('hide');
+      $(".send").addClass('hide');
+      var countText = 59;
+      $("#miao").html(countText);
+      var timmer = setInterval(function () {
+        countText -= 1;
+        $("#miao").html(countText);
+        if (countText == 0) {
+          $(".time").addClass('hide');
+          $(".send").removeClass('hide');
+          clearInterval(timmer);
+        }
+      }, 1000);
+
+    }
+
+  })
+
+  function checkPhone(phone) {
+    var status = true;
+    if (phone == '') {
+      $('.num2-err').removeClass('hide').find("em").text('请输入手机号');
+      return false;
+    }
+    var param = /^1[34578]\d{9}$/;
+    if (!param.test(phone)) {
+      // globalTip({'msg':'手机号不合法，请重新输入','setTime':3});
+      $('.num2-err').removeClass('hide');
+      $('.num2-err').text('手机号不合法，请重新输入');
+      return false;
+    }
+    $.ajax({
+      url: '/api/main/phoneCode.jhtml',
+      type: 'post',
+      dataType: 'json',
+      async: false,
+      data: {
+        phone: phone
+      },
+      success: function (data) {
+        if (data.state == 100) {
+          $('.num2-err').addClass('hide');
+          status = true;
+        } else {
+          sweetAlert({
+            title: data.message,
+            type: "warning",
+            timer: 1500
+          });
+          $('.num2-err').removeClass('hide').text(data.message);
+          status = false;
+        }
+      },
+      error: function () {
+        status = false;
+      }
+    });
+    return status;
+  }
+  //输入框输入时模拟placeholder效果
+  var oInput = $(".form-data input");
+  oInput.focus(function () {
+    $(this).siblings("label").hide();
+  });
+  oInput.blur(function () {
+    if ($(this).val() == "") {
+      $(this).siblings("label").show();
+    }
+  });
+
+  $('.tab-btn > div').on('click', function () {
+    $('.tab-btn > div').removeClass()
+    $('.tab-content > img').removeClass()
+    $($('.tab-content > img')[$(this).addClass('active').data('value')]).addClass('show')
+  })
+
+  sign()
+
+  $('#signCompanyBtn').on('click', function () {
+    var companyName = $('#companyName').val();
+    var companyPassword = $('#companyPassword').val();
+    var companyIdCard = $('#companyIdCard').val();
+    var companyEmail = $('#companyEmail').val();
+    var companyAddress = $('#companyAddress').val();
+    var companyLegalName = $('#companyLegalName').val();
+    var companyPhone = $('#companyPhone').val();
+    var companyLegalId = $('#companyLegalId').val();
+    var laborContractUrl = $('#laborContractUrl').attr('src')
+    var powerAttorneyUrl = $('#powerAttorneyUrl').attr('src')
+    console.log('11')
+    if (laborContractUrl == './images/pic.png' || powerAttorneyUrl == './images/pic.png') {
+      sweetAlert({
+        title: '前上传相应图片',
+        type: 'error',
+        confirmButtonText: "好的"
+      })
+      return
+    }
+    $.ajax({
+      url: '/api/main/registerAdmin.jhtml',
+      type: 'post',
+      dataType: 'json',
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      async: false,
+      data: JSON.stringify({
+        name: companyName,
+        password: companyPassword,
+        idCard: companyIdCard,
+        email: companyEmail,
+        trueAddress: companyAddress,
+        legalManName: companyLegalName,
+        legalManPhone: companyPhone,
+        legalManId: companyLegalId,
+        laborContractUrl: laborContractUrl,
+        powerAttorneyUrl: powerAttorneyUrl,
+        litigantType: 1
+      }),
+      success: function (data) {
+        if (data.state == 100) {
+          $('#companyName').val('');
+          $('#companyPassword').val('');
+          $('#companyIdCard').val('');
+          $('#companyEmail').val('');
+          $('#companyAddress').val('');
+          $('#companyLegalName').val('');
+          v$('#companyPhone').val('');
+          $('#companyLegalId').val('');
+          $('#laborContractUrl')[0].src = './images/pic.png';
+          $('#powerAttorneyUrl')[0].src = './images/pic.png';
+          $("#legal").addClass("hide");
+          swal({
+            title: data.message,
+            type: "success",
+            confirmButtonText: "好的"
+          });
+          $(".back-h").addClass('hide');
+        } else {
+          swal({
+            title: data.message,
+            type: "error",
+            confirmButtonText: "好的"
+          });
+          $(".back-h").addClass('hide');
+        }
+      },
+      error: function () {
+        status = false;
+      }
+    });
+  })
+  //注册
+  function sign() {
+
+
+    $("#nextBtn").unbind("click").click(function () {
+      var phone = $.trim($('#phonenum').val());
+      var phoneCode = $.trim($('#phoneCode').val());
+      if (phone == '') {
+        $("#phoneWarn").removeClass('hide').find("em").text('手机号不能为空');
+        return false;
+      }
+      $.ajax({
+        url: '/api/main/registerPhone.jhtml',
+        type: 'post',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: JSON.stringify({
+          phone: phone,
+          mcode: phoneCode
+        }),
+        success: function (data) {
+          if (data.state == 100) {
+            $('#phonenum').val('')
+            $('#phoneCode').val('')
+            $(".signform1").addClass("hide");
+            $(".signform2").removeClass("hide");
+            $("#signBtn").removeClass("hide");
+            $("#nextBtn").addClass("hide");
+          } else {
+            sweetAlert({
+              title: data.message,
+              type: "error",
+              confirmButtonText: "好的"
+            });
+          }
+        },
+        error: function () {
+          status = false;
+        }
+      });
+    })
+    $("#signBtn").unbind("click").click(function () {
+      console.log($("#signBtn"))
+      console.log('12')
+      var phone = $.trim($('#phonenum').val());
+      var idCard = $.trim($('#idCard').val());
+      var name = $('#name').val()
+      var idCardUrl = $('#idCardUrl').attr('src')
+      var holdIdCardUrl = $('#holdIdCardUrl').attr('src')
+      if (idCardUrl == './images/pic.png' || holdIdCardUrl == './images/pic.png') {
+        console.log('22')
+        sweetAlert({
+          title: '前上传相应图片',
+          type: 'error',
+          confirmButtonText: "好的"
+        })
+        return
+      }
+      if (idCard == '') {
+        $("#idCardWarn").removeClass('hide').find("em").text('身份证号码不能为空');
+        return false;
+      }
+      var password = $.trim($('#password').val());
+      if (password == '') {
+        $('#passWarn').removeClass('hide').find("em").text('密码不能为空');
+        return false;
+      }
+      var password2 = $.trim($('#password2').val());
+      if (password != password2) {
+        $('#pass2Warn').removeClass('hide').find("em").text('密码不一致');
+        return false;
+      }
+      var email = $.trim($('#email').val());
+      var trueAddress = $.trim($('#trueAddress').val());
+      $.ajax({
+        url: '/api/main/registerAdmin.jhtml',
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: JSON.stringify({
+          idCard: idCard,
+          phone: phone,
+          name: name,
+          password: password,
+          email: email,
+          trueAddress: trueAddress,
+          idCardUrl: idCardUrl,
+          holdIdCardUrl: holdIdCardUrl,
+          litigantType: 0
+        }),
+        success: function (data) {
+          if (data.state == 100) {
+            console.log(data)
+            $('#phonenum').val('')
+            $('#idCard').val('')
+            $('#name').val('')
+            $('#password').val('')
+            $('#password2').val('')
+            $('#email').val('')
+            $('#trueAddress').val('')
+            $('#idCardUrl')[0].src = './images/pic.png';
+            $('#holdIdCardUrl')[0].src = './images/pic.png';
+            swal({
+              title: data.message,
+              type: "success",
+              confirmButtonText: "好的"
+            });
+            $(".back-h").addClass('hide');
+          } else {
+            console.log(data)
+            swal({
+              title: data.message,
+              type: "error",
+              confirmButtonText: "好的"
+            });
+            // $(".back-h").addClass('hide');
+          }
+        },
+        error: function () {
+          status = false;
+        }
+      });
+    })
+  }
+
+  // 登录点击事件
+  function sendBtn() {
+    if (tab == 'account_number') {
+      $(".log-btn").click(function () {
+        var inp = $.trim($('#num').val());
+        var pass = $.trim($('#pass').val());
+        var veri1 = $.trim($('#veri1').val());
+        if (checkAccount(inp) && checkPass(pass)) {
+          var ldata = {
+            'idCard': inp,
+            'password': MD5(pass),
+            'code': veri1
+          };
+          console.log(989)
+          $.ajax({
+            url: '/api/main/phoneLogin.jhtml',
+            type: 'post',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            async: false,
+            data: JSON.stringify(ldata),
+            success: function (data) {
+              if (data.state == 100) {
+                swal({
+                  title: data.message,
+                  type: "success",
+                  confirmButtonText: "好的"
+                });
+                $('.form-data').addClass("hide");
+                $(".back-h").addClass('hide');
+                getUserInfo()
+                changeCode()
+              } else {
+                swal({
+                  title: data.message,
+                  type: "error",
+                  confirmButtonText: "好的"
+                });
+              }
+            },
+            error: function () {
+
+            }
+          });
+        } else {
+          return false;
+        }
+      });
+    } else {
+      $(".log-btn").click(function () {
+        var inp1 = $.trim($('#num1').val());
+        var pass1 = $.trim($('#pass1').val());
+        var veri2 = $.trim($('#veri2').val());
+        if (checkAccount(inp1) && checkPass(pass1)) {
+          $.ajax({
+            url: '/api/main/login.jhtml',
+            type: 'post',
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            async: false,
+            data: JSON.stringify({
+              username: inp1,
+              password: MD5(pass1),
+              code: veri2
+            }),
+            success: function (data) {
+              if (data.state == 100) {
+                swal({
+                  title: data.message,
+                  type: "success",
+                  confirmButtonText: "好的"
+                });
+                $('.form-data').addClass("hide");
+                $(".back-h").addClass('hide');
+                getUserInfo()
+                changeCode()
+              } else {
+                swal({
+                  title: data.message,
+                  type: "error",
+                  confirmButtonText: "好的"
+                });
+              }
+            },
+            error: function () {
+
+            }
+          });
+        } else {
+          $(".log-btn").off('click').addClass("off");
+          // $('.tel-warn').removeClass('hide').text('登录失败');
+          return false;
+        }
+      });
+    }
+  }
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 100) {
+      $("#back-to-top").fadeIn(1500);
+    } else {
+      $("#back-to-top").fadeOut(1500);
+    }
+  });
+
+</script>
